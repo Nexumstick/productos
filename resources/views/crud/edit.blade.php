@@ -22,7 +22,7 @@
                   <label for="exampleInputEmail1" class="form-label">Descripcion</label>
                   <textarea name="description" id="" cols="30" rows="10" class="form-control">{{ $producto->description}}</textarea>
                   <label for="exampleInputEmail1" class="form-label">Name</label>
-                    <input type="number" class="form-control" name="price" aria-describedby="emailHelp">
+                    <input type="number" class="form-control" name="price" value="{{ $producto->price }}" aria-describedby="precio">
                   <div class="mb-3 form-check">
                     <input type="checkbox" name="activo"class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Activo</label>

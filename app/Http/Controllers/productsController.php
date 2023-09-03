@@ -14,6 +14,7 @@ class productsController extends Controller
     public function index()
     {
         $products = product::all();
+        // return view('yeisons.index')->with('productos',$products);
         return view('crud.index')->with('productos',$products);
     
     }
@@ -59,6 +60,10 @@ class productsController extends Controller
      */
     public function show(string $id)
     {
+        //$pro = product::find($id);
+        $pro->name = $request['name'];
+        $pro->description = $request['description'];
+        return $pro;
         //
     }
 
@@ -80,15 +85,16 @@ class productsController extends Controller
         $pro->name = $request['name'];
         $pro->description = $request['description'];
         $pro->save();
-
+        return redirect('/products');
        
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        product::deleted($id);
+        product::destroy($id);
+       return redirect ('/products');
     }
 }

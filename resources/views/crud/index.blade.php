@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-10 mx-auto">
-                <a href="" class="btn-btn-succes">Crear Producto</a>
+                <a href="products/create" class="btn-btn-succes">Crear Producto</a>
                 <table class="table">
                     <thead>
                         <th>ID</th>
@@ -24,18 +24,20 @@
                     </thead>
                     <tbody>
                         @foreach ($productos as $producto)
+                            <tr>
         
                             <td>{{ $producto->id }}</td>
                             <td>{{ $producto->name }}</td>
                             <td>{{ $producto->description }}</td>
                             <td>{{ $producto->price }}</td>
                             <td>{{ $producto->seller }}</td>
+                            <td><button class="btn btn-warning"><a href="{{route('products.edit',$producto->id)}}">Editar</a></button></td>
                             <td>
-                                <button class="btn btn-primary">Ed</button>
-                                <button class="btn btn-danger">El</button>
-
+                                
+                            
                             </td>
                             
+                        </tr>
                         @endforeach
                     </tbody>
                 </table>

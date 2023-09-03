@@ -8,7 +8,7 @@
   </head>
   <body>
     
-<div class="contaienr">
+<div class="container">
     <div class="row">
         <div class="col-sm-10 mx-auto">
             <form action="/products" method="POST">
@@ -20,7 +20,7 @@
                   </div>
                   <label for="exampleInputEmail1" class="form-label">Descripcion</label>
                   <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
-                  <label for="exampleInputEmail1" class="form-label">Name</label>
+                  <label for="exampleInputEmail1" class="form-label">Precio</label>
                     <input type="number" class="form-control" name="price" aria-describedby="emailHelp">
                   <div class="mb-3 form-check">
                     <input type="checkbox" name="activo"class="form-check-input" id="exampleCheck1">
